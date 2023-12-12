@@ -1,5 +1,4 @@
 import pymongo
-import pandas as pd
 
 
 class MongoDBManager:
@@ -31,11 +30,11 @@ class MongoDBManager:
     def get_length(self):
         return self.collection.count_documents({})
 
-
-df = pd.read_csv(r'D:\github\Covid-19-Data-Analyst\Covid-19-DataSets\country_wise_latest.csv')
-mongo_manager = MongoDBManager()
-mongo_manager.clear_data()
-data_dict = df.to_dict("records")
-mongo_manager.insert_data(data_dict)
-print(mongo_manager.get_length())
-print(mongo_manager.get_data({"Country/Region": "Turkey"}))
+#
+# df = pd.read_csv(r'D:\github\Covid-19-Data-Analyst\Covid-19-DataSets\country_wise_latest.csv')
+# mongo_manager = MongoDBManager()
+# mongo_manager.clear_data()
+# data_dict = df.to_dict("records")
+# mongo_manager.insert_data(data_dict)
+# print(mongo_manager.get_length())
+# print(mongo_manager.get_data({"Country/Region": "Turkey"}))
