@@ -20,10 +20,10 @@ https://www.kaggle.com/datasets/imdevskp/corona-virus-report
 ![Recovered_correlation](Graphic_Analysis_Results/Confirmed_Recovered_Correlation.png)
 
 ## Recovery status per 100 cases
-![test](Graphic_Analysis_Results/Recovery status per 100 cases.png)
+![recovery_status_100Cases](Graphic_Analysis_Results/Recovery_status_per_100_cases.png)
 
 ## Deaths status per 100 cases
-![test2](Graphic_Analysis_Results/Deaths status per 100 cases.png)
+![death_status_100Cases](Graphic_Analysis_Results/Deaths_status_per_100_cases.png)
 
 
 

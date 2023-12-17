@@ -105,7 +105,7 @@ chartdrawer.plot_bar_chart(
     'Recovery status per 100 cases',
     'Countries',
     'Recovered/100 Cases',
-    'Recovery status per 100 cases'
+    'Recovery_status_per_100_cases'
 )
 sorted_data_deaths_100cases = dataFrame.sort_values(by='Deaths / 100 Cases',ascending=False) #azalan siralama yapilir
 top10_deaths_100_cases=sorted_data_deaths_100cases.head(10)
@@ -117,5 +117,5 @@ chartdrawer.plot_bar_chart(
     'Deaths status per 100 cases',
     'Countries',
     'Recovered/100 Cases',
-    'Deaths status per 100 cases'
+    'Deaths_status_per_100_cases'
 )
