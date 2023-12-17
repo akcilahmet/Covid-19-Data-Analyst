@@ -35,4 +35,4 @@ https://www.kaggle.com/datasets/imdevskp/corona-virus-report
 
 ```python
 info = dataFrame.info()
-print(info
+print(info)
