@@ -31,14 +31,10 @@ print(confirmed_by_country)
 percentage=confirmed_by_country / confirmed_by_country.sum()*100
 print(percentage)
 
-#top10
+#top10 daire grafik
 top_10_percentage=percentage.head(10)
-#daire grafige cizme
-plt.figure(figsize=(10,10))
 
-# plt.pie(top_10_percentage,labels=top_10_percentage.index,autopct='%1.1f%%',startangle=140,shadow=True)
-# plt.title(f'Percentage Distribution of Confirmed Cases by Country')
-# plt.show()
+chartdrawer.plot_pie_chart(top_10_percentage,'Percentage Distribution of Confirmed Cases by Country','Top10_Countries_Confirmed_Pie_Chart')
 
 
 #en fazla dogrulanmıs vaka , ölüm ve iyilesen vaka sayisina sahip ilk 10 ülke
@@ -47,16 +43,79 @@ top_10_countries=sorted_data.head(10)
 print(top_10_countries[['Country/Region','Confirmed','Deaths','Recovered']])
 
 #en fazla dogrulanmıs vaka bar grafigi
-chartdrawer.plot_bar_chart(top_10_countries,'Country/Region','Confirmed','Top 10 countries with the highest confirmed cases','Countries','Confirmed')
+chartdrawer.plot_bar_chart(
+    top_10_countries,
+    'Country/Region',
+    'Confirmed',
+    'Top 10 countries with the highest confirmed cases',
+    'Countries',
+    'Confirmed',
+    'Top10_Countries_Confirmed'
+)
 
 #en fazla ölüm sayisi
-chartdrawer.plot_bar_chart(top_10_countries,'Country/Region','Deaths','Top 10 countries with the highest death cases','Countries','Deaths')
+chartdrawer.plot_bar_chart(
+    top_10_countries,
+    'Country/Region',
+    'Deaths',
+    'Top 10 countries with the highest death cases',
+    'Countries',
+    'Deaths',
+    'Top10_Countries_Deaths')
 
 #En fazla iyilesen vaka sayisi
-chartdrawer.plot_bar_chart(top_10_countries,'Country/Region','Recovered','Top 10 countries with the highest recovered cases','Countries','Recovered')
+chartdrawer.plot_bar_chart(
+    top_10_countries,
+    'Country/Region',
+    'Recovered',
+    'Top 10 countries with the highest recovered cases',
+    'Countries',
+    'Recovered',
+    'Top10_Countries_Recovered')
 
 
 #Onaylanmış vakalar, ölüm vakaları ve iyileşen vakalar arasında bir korelasyon var mı?
-chartdrawer.plot_and_analyze_correlation(dataFrame,'Confirmed','Deaths','Onaylanmis vakalar ve ölüm korelasyonu','Confirmed','Deaths')
+chartdrawer.plot_and_analyze_correlation(
+    dataFrame,
+    'Confirmed',
+    'Deaths',
+    'Onaylanmis vakalar ve ölüm korelasyonu',
+    'Confirmed',
+    'Deaths',
+    'Confirmed_Death_Correlation')
 
-chartdrawer.plot_and_analyze_correlation(dataFrame,'Confirmed','Recovered','Onaylanmis vakalar ve iyileşme korelasyonu','Confirmed','Recovered')
+chartdrawer.plot_and_analyze_correlation(
+    dataFrame,
+    'Confirmed',
+    'Recovered',
+    'Onaylanmis vakalar ve iyileşme korelasyonu',
+    'Confirmed',
+    'Recovered',
+    'Confirmed_Recovered_Correlation')
+
+
+#100 vakaya top 10
+sorted_data_recovered_100cases = dataFrame.sort_values(by='Recovered / 100 Cases',ascending=False) #azalan siralama yapilir
+top10_recovered_100_cases=sorted_data_recovered_100cases.head(10)
+#100 vakaya top 10 recovered
+chartdrawer.plot_bar_chart(
+    top10_recovered_100_cases,
+    'Country/Region',
+    'Recovered / 100 Cases',
+    'Number of recovered per 100 cases',
+    'Countries',
+    'Recovered/100 Cases',
+    'Number of recovered per 100 cases'
+)
+sorted_data_deaths_100cases = dataFrame.sort_values(by='Deaths / 100 Cases',ascending=False) #azalan siralama yapilir
+top10_deaths_100_cases=sorted_data_deaths_100cases.head(10)
+#100 vakaya top 10 deaths
+chartdrawer.plot_bar_chart(
+    top10_deaths_100_cases,
+    'Country/Region',
+    'Deaths / 100 Cases',
+    'Number of deaths per 100 cases',
+    'Countries',
+    'Recovered/100 Cases',
+    'Number of deaths per 100 cases'
+)
