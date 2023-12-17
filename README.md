@@ -17,7 +17,7 @@ https://www.kaggle.com/datasets/imdevskp/corona-virus-report
 ![Death_correlation](Graphic_Analysis_Results/Confirmed_Death_Correlation.png)
 
 ## Recovered correlation status with confirmed cases
-![Recovered_correlation](Graphic_Analysis_Results/TConfirmed_Recovered_Correlation.png)
+![Recovered_correlation](Graphic_Analysis_Results/Confirmed_Recovered_Correlation.png)
 
 ## Recovery status per 100 cases
 ![recovery_status_100Cases](Graphic_Analysis_Results/Recovery status per 100 cases.png)
