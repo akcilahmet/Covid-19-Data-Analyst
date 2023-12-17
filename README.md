@@ -29,7 +29,9 @@ https://www.kaggle.com/datasets/imdevskp/corona-virus-report
 ![death_status_100Cases](Graphic_Analysis_Results/Deaths_status_per_100_cases.png)
 
 
-## DataFrame Information
 
+
+```markdown
+## DataFrame Information
 ```python
-info = dataFrame.info()
+dataFrame.info()
