@@ -79,7 +79,7 @@ chartdrawer.plot_and_analyze_correlation(
     dataFrame,
     'Confirmed',
     'Deaths',
-    'Onaylanmis vakalar ve ölüm korelasyonu',
+    'Death correlation status with confirmed cases',
     'Confirmed',
     'Deaths',
     'Confirmed_Death_Correlation')
@@ -88,7 +88,7 @@ chartdrawer.plot_and_analyze_correlation(
     dataFrame,
     'Confirmed',
     'Recovered',
-    'Onaylanmis vakalar ve iyileşme korelasyonu',
+    'Recovered correlation status with confirmed cases',
     'Confirmed',
     'Recovered',
     'Confirmed_Recovered_Correlation')
@@ -102,10 +102,10 @@ chartdrawer.plot_bar_chart(
     top10_recovered_100_cases,
     'Country/Region',
     'Recovered / 100 Cases',
-    'Number of recovered per 100 cases',
+    'Recovery status per 100 cases',
     'Countries',
     'Recovered/100 Cases',
-    'Number of recovered per 100 cases'
+    'Recovery status per 100 cases'
 )
 sorted_data_deaths_100cases = dataFrame.sort_values(by='Deaths / 100 Cases',ascending=False) #azalan siralama yapilir
 top10_deaths_100_cases=sorted_data_deaths_100cases.head(10)
@@ -114,8 +114,8 @@ chartdrawer.plot_bar_chart(
     top10_deaths_100_cases,
     'Country/Region',
     'Deaths / 100 Cases',
-    'Number of deaths per 100 cases',
+    'Deaths status per 100 cases',
     'Countries',
     'Recovered/100 Cases',
-    'Number of deaths per 100 cases'
+    'Deaths status per 100 cases'
 )
