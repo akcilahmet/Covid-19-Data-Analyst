@@ -1,6 +1,9 @@
 # Covid-19-Data-Analyst
 https://www.kaggle.com/datasets/imdevskp/corona-virus-report
 
+
+
+
 ## Percentage Distribution of Confirmed Cases by Country
 ![Top10Countries_Confirmed](Graphic_Analysis_Results/Top10_Countries_Confirmed_Pie_Chart.png)
 
@@ -26,4 +29,7 @@ https://www.kaggle.com/datasets/imdevskp/corona-virus-report
 ![death_status_100Cases](Graphic_Analysis_Results/Deaths_status_per_100_cases.png)
 
 
+## DataFrame Information
 
+```python
+info = dataFrame.info()
