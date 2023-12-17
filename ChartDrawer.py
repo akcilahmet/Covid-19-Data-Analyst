@@ -1,16 +1,21 @@
 import os.path
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+"""
+This script contains functions for data analysis and visualization.
+
+1. `plot_bar_chart`: Function to create a bar chart. It draws a bar chart between specified columns in the given DataFrame.
+2. `plot_and_analyze_correlation`: Function to analyze correlation between two columns by plotting a scatter plot. Additionally, it calculates the Pearson correlation coefficient.
+3. `plot_pie_chart`: Function to create a pie chart. It draws a pie chart using the specified column in the given DataFrame.
+"""
 
 output_folder='Graphic_Analysis_Results'
 
-#eger klasör yok ise olusturma islemi yapilir
+##If the folder does not exist, it is created
 if not os.path.exists((output_folder)):
     os.makedirs(output_folder)
 
-#seaborn scatter plot(nokta grafigi)
 def plot_bar_chart(data, x_column, y_column, title, x_label, y_label,file_name):
     plt.figure(figsize=(5, 5))
     plt.bar(data[x_column], data[y_column], color='blue')
@@ -31,12 +36,11 @@ def plot_and_analyze_correlation(data,x_column,y_column,title,x_label,y_label,fi
     # Grafikleri farklı dosya adlarıyla kaydedin
     file_path=os.path.join(output_folder,f"{file_name}.png")
     plt.savefig(file_path)
-   # plt.show()
+    #plt.show()
 
-    #korelasyon katsayisi hesapla
+    #Correlation Coefficient calculates
     correlation=data[x_column].corr(data[y_column])
-    print(f"Korelasyon Katsayısı ({x_column} ve {y_column}): {correlation}")
-
+    print(f"Correlation Coefficient ({x_column} ve {y_column}): {correlation}")
 
 def plot_pie_chart(data,title,file_name):
     plt.figure(figsize=(8,8))
