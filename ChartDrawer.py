@@ -12,7 +12,7 @@ if not os.path.exists((output_folder)):
 
 #seaborn scatter plot(nokta grafigi)
 def plot_bar_chart(data, x_column, y_column, title, x_label, y_label,file_name):
-    plt.figure(figsize=(10, 10))
+    plt.figure(figsize=(5, 5))
     plt.bar(data[x_column], data[y_column], color='blue')
     plt.xlabel(x_label)
     plt.ylabel(y_label)
@@ -39,7 +39,7 @@ def plot_and_analyze_correlation(data,x_column,y_column,title,x_label,y_label,fi
 
 
 def plot_pie_chart(data,title,file_name):
-    plt.figure(figsize=(10,10))
+    plt.figure(figsize=(8,8))
     plt.pie(data,labels=data.index,autopct='%1.1f%%',startangle=140,shadow=True)
     plt.title(title)
     file_path=os.path.join(output_folder,f"{file_name}.png")
