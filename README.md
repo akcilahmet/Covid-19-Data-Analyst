@@ -85,4 +85,4 @@ sorted_data = dataFrame.sort_values(by='Confirmed',ascending=False)
 top_10_countries=sorted_data.head(10)
 print(top_10_countries[['Country/Region','Confirmed','Deaths','Recovered']])
 ```
-![Top_10_countries_highest_confirmed cases_deaths_recoveries](Graphic_Analysis_Results/Top_10_countries_highest_confirmed cases_deaths_recoveries.png)
+![Top_10_countries_highest_confirmed cases_deaths_recoveries](Graphic_Analysis_Results/Top_10_countries_highest_confirmed_cases_deaths_recoveries.png)
