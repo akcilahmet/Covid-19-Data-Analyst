@@ -32,7 +32,16 @@ https://www.kaggle.com/datasets/imdevskp/corona-virus-report
 
 
 ## Data Analysis Information
-
 ```python
 info = dataFrame.info()
 print(info)
+
+## Number of unique values
+print(dataFrame['Country/Region'].nunique())
+
+## Number of unique values list
+print(dataFrame['Country/Region'].unique())
+
+## Number of null value
+print(dataFrame.isnull().sum())
+
