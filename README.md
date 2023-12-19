@@ -67,6 +67,8 @@ print(top_10_countries[['Country/Region','Confirmed','Deaths','Recovered']])
 
 ## Correlation Between Confirmed, Death and Recovered Cases
 ![Correlation](Graphic_Analysis_Results/Confirmed_Death_Correlation_heatmap.png)
+### As the correlation coefficient approaches -1, it indicates a strong negative linear relationship between two variables, implying that as one variable increases, the other tends to decrease. 
+### Conversely, as it approaches +1, it signifies a strong positive linear relationship, meaning that as one variable increases, the other tends to increase as well
 
 ## Recovery status per 100 cases
 ![recovery_status_100Cases](Graphic_Analysis_Results/Recovery_status_per_100_cases.png)
