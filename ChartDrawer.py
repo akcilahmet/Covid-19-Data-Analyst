@@ -28,19 +28,19 @@ def plot_bar_chart(data, x_column, y_column, title, x_label, y_label,file_name):
     plt.savefig(file_path)
     #plt.show()
 
-def plot_and_analyze_correlation(data,x_column,y_column,title,x_label,y_label,file_name):
-    sns.scatterplot(x=x_column,y=y_column,data=data)
-    plt.title(title)
-    plt.xlabel(x_label)
-    plt.ylabel(y_label)
-    # Grafikleri farklı dosya adlarıyla kaydedin
-    file_path=os.path.join(output_folder,f"{file_name}.png")
-    plt.savefig(file_path)
-    #plt.show()
 
-    #Correlation Coefficient calculates
-    correlation=data[x_column].corr(data[y_column])
-    print(f"Correlation Coefficient ({x_column} ve {y_column}): {correlation}")
+def plot_heatmap(data, title, file_name):
+    # Korelasyon matrisini hesapla
+    correlation_matrix = data[['Confirmed','Deaths','Recovered']].corr()
+
+    # Heatmap çizimi
+    sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm',fmt = '.2f')
+    plt.title(title)
+
+    # Heatmap'i dosyaya kaydet
+    file_path = os.path.join(output_folder, f"{file_name}_heatmap.png")
+    plt.savefig(file_path)
+    plt.show()
 
 def plot_pie_chart(data,title,file_name):
     plt.figure(figsize=(8,8))

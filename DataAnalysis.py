@@ -76,25 +76,12 @@ chartdrawer.plot_bar_chart(
     'Top10_Countries_Recovered')
 
 #Correlation
-#Death correlation status with confirmed cases
-chartdrawer.plot_and_analyze_correlation(
+#Death,Confirmed,Recovered correlation
+chartdrawer.plot_heatmap(
     dataFrame,
-    'Confirmed',
-    'Deaths',
-    'Death correlation status with confirmed cases',
-    'Confirmed',
-    'Deaths',
-    'Confirmed_Death_Correlation')
-
-#Recovered correlation status with confirmed cases
-chartdrawer.plot_and_analyze_correlation(
-    dataFrame,
-    'Confirmed',
-    'Recovered',
-    'Recovered correlation status with confirmed cases',
-    'Confirmed',
-    'Recovered',
-    'Confirmed_Recovered_Correlation')
+    'Correlation Between Confirmed, Death and\n Recovered Cases',
+    'Confirmed_Death_Correlation'
+)
 
 
 #100 cases status

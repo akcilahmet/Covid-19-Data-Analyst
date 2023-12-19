@@ -65,11 +65,8 @@ print(top_10_countries[['Country/Region','Confirmed','Deaths','Recovered']])
 ## Top 10 countries with the highest recovered cases
 ![Top10_Countries_Recovered](Graphic_Analysis_Results/Top10_Countries_Recovered.png)
 
-## Death correlation status with confirmed cases
-![Death_correlation](Graphic_Analysis_Results/Confirmed_Death_Correlation.png)
-
-## Recovered correlation status with confirmed cases
-![Recovered_correlation](Graphic_Analysis_Results/Confirmed_Recovered_Correlation.png)
+## Correlation Between Confirmed, Death and Recovered Cases
+![Correlation](Graphic_Analysis_Results/Confirmed_Death_Correlation_heatmap.png)
 
 ## Recovery status per 100 cases
 ![recovery_status_100Cases](Graphic_Analysis_Results/Recovery_status_per_100_cases.png)
