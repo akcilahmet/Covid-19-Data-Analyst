@@ -30,14 +30,11 @@ def plot_bar_chart(data, x_column, y_column, title, x_label, y_label,file_name):
 
 
 def plot_heatmap(data, title, file_name):
-    # Korelasyon matrisini hesapla
     correlation_matrix = data[['Confirmed','Deaths','Recovered']].corr()
 
-    # Heatmap çizimi
     sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm',fmt = '.2f')
     plt.title(title)
 
-    # Heatmap'i dosyaya kaydet
     file_path = os.path.join(output_folder, f"{file_name}_heatmap.png")
     plt.savefig(file_path)
     plt.show()

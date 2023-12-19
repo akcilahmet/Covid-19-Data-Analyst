@@ -83,7 +83,6 @@ chartdrawer.plot_heatmap(
     'Confirmed_Death_Correlation'
 )
 
-
 #100 cases status
 
 #Recovery status per 100 cases
